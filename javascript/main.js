@@ -20,7 +20,7 @@ function saveToLocalStorage(name, value) {
 }
 
 function redirect() {
-    window.location.href = "../success.html";
+    window.open("../success.html", "_blank");
 }
 
 function regExp(emailValue) {
