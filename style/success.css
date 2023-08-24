@@ -1,0 +1,172 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* html,
+body {
+    height: 100vh;
+} */
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+    /* Primary Colors  */
+    --clr-primary-tomato: hsl(4, 100%, 67%);
+
+
+    /* Neutral Colors  */
+    --clr-neutral-dark-slate-gray: hsl(234, 29%, 20%);
+    --clr-neutral-charcoal-gray: hsl(235, 18%, 26%);
+    --clr-neutral-gray: hsl(231, 7%, 60%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-label-or-button: hsl(232, 31%, 20%);
+    --clr-neutral-paragraph: hsl(240, 4%, 45%);
+
+
+    /* Gradient Colos */
+    --clr-gradient-button-one: hsl(346, 91%, 65%);
+    --clr-gradient-button-two: hsl(357, 96% ,67%);
+    --clr-gradient-button-three: hsl(1, 100%, 68%);
+    --clr-gradient-button-four: hsl(10, 100%, 64%);
+    --clr-gradient-button-five: hsl(13, 82%, 62%);
+
+
+    /* Font Family */
+    --ff-roboto: 'Roboto', sans-serif;
+
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+
+    /* Border Radius */
+    --br-input-button: .525em;
+}
+
+
+main {
+    background: var(--clr-neutral-white);
+    padding: 10rem 1rem 2rem;
+    font-family: var(--ff-roboto);
+    max-width: 375px;
+    margin: auto;
+}
+
+.image-container {
+    margin-bottom: 3rem;
+}
+
+.text-container {
+    margin-bottom: 16.7rem;
+}
+
+.text-container > h1 {
+    color: var(--clr-neutral-dark-slate-gray);
+    font-size: 2.5em;
+    font-weight: var(--fw-bold);
+    line-height: 1;
+    margin-bottom: 1rem;
+    max-width: 10ch;
+}
+
+.text-container > p {
+    color: var(--clr-neutral-paragraph);
+    font-size: 1em;
+    max-width: 40ch;
+}
+
+#email-value {
+    color: var(--clr-neutral-dark-slate-gray);
+    font-weight: var(--fw-bold);
+}
+
+button {
+    color: var(--clr-neutral-white);
+    border-radius: var(--br-input-button);
+    border: none;
+    background-color: var(--clr-neutral-label-or-button);
+    display: block;
+    padding: 1em;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, 
+    var(--clr-gradient-button-one),
+    var(--clr-gradient-button-two),
+    var(--clr-gradient-button-three),
+    var(--clr-gradient-button-four),
+    var(--clr-gradient-button-five));
+}
+
+@media (min-width: 800px) {
+    body {
+        background: var(--clr-neutral-charcoal-gray);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    main {
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        padding-top: 18rem;
+        padding-bottom: 18rem;
+    }
+
+    main {
+        border-radius: 2rem;
+        max-width: 33.75rem;
+        max-height: 33.75rem;
+        padding: 3rem 4rem 4rem;
+    }
+
+    .text-container {
+        margin-bottom: 2rem;
+    }
+
+    .text-container > p {
+        max-width: 42ch;
+    }
+}
